@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="NewDEpartment" Caption="New Department" ViewId="NewDepartment" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SystemAspNetModule" Version="22.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="22.2.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="CustomDepartment_DetailView" ClassName="CustomData_BoundControl_WebForms.Module.BusinessObjects.Department" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="DepartmentViewItem" CustomControlPath="DepartmentViewControl.ascx" IsNewNode="True" />
+      </Items>
+    </DetailView>
+    <ListView Id="Department_ListView" DetailViewID="Department_DetailView" />
+    <DashboardView Id="NewDepartment" Caption="New Department" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Department" Caption="Department" CustomControlPath="DepartmentViewControl.ascx" IsNewNode="True" />
+      </Items>
+    </DashboardView>
+  </Views>
+</Application>
